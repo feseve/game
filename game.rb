@@ -20,7 +20,7 @@ end
 def battle(player,enemy)
   puts 'battle'
   player_turn(player,enemy)
-  enemy_turn
+  enemy_turn(player,enemy)
 end
 
 def player_turn(player,enemy)
@@ -46,8 +46,8 @@ def player_turn(player,enemy)
   end
 end
 
-def enemy_turn
-  puts 'enemy_turn'
+def enemy_turn(player,enemy)
+  enemy.move player
 end
 
 game
