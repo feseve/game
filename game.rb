@@ -50,4 +50,8 @@ def enemy_turn(player,enemy)
   enemy.move player
 end
 
+def judge(player,enemy)
+
+end
+
 game
