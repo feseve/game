@@ -23,23 +23,29 @@ class Player
       puts @skills
       value = gets.chomp
       case value
-      when 'はやぶさぎり'
+      when 'はやぶさぎり','h'
         puts @name + 'のはやぶさぎり!'
         damage = @atk*2
         enemy.hp = enemy.hp - damage
         puts enemy.name + 'に' + damage.to_s + 'のダメージ!'
         break
-      when 'めたるぎり'
+      when 'めたるぎり','m'
         puts @name + 'のはやぶさぎり!'
         damage = 1
         @atk.times do
           enemy.hp = enemy.hp - damage
         end
-        puts enemy.nam + 'に' + @atk.to_s + 'のダメージ!'
+        puts enemy.name + 'に' + @atk.to_s + 'のダメージ!'
         break
       else
         puts '不正な入力です。とくぎ名を入力してください。'
       end
     end
   end
+
+  def escape
+    puts @name + 'はにげだした！'
+    @hp = 0
+  end
+
 end
